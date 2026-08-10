@@ -1,16 +1,6 @@
-/* Local typeface supplied by the user */
-@font-face {
-  font-family: "DFVN Lucky Skirt";
-  src:
-    url("assets/fonts/DFVN-Lucky-Skirt.ttf") format("truetype"),
-    url("assets/fonts/DFVN-Lucky-Skirt.otf") format("opentype");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
 :root {
-  --study-font: "DFVN Lucky Skirt", Arial, Helvetica, sans-serif;
+  /* Arial is simple, highly readable, and supports Vietnamese characters. */
+  --study-font: Arial, Helvetica, sans-serif;
   --code-font: Consolas, "Courier New", monospace;
 }
 
