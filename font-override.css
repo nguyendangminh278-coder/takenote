@@ -1,0 +1,34 @@
+/* Local typeface supplied by the user */
+@font-face {
+  font-family: "DFVN Lucky Skirt";
+  src:
+    url("assets/fonts/DFVN-Lucky-Skirt.ttf") format("truetype"),
+    url("assets/fonts/DFVN-Lucky-Skirt.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --study-font: "DFVN Lucky Skirt", Arial, Helvetica, sans-serif;
+  --code-font: Consolas, "Courier New", monospace;
+}
+
+html,
+body,
+body *,
+button,
+input,
+select,
+textarea {
+  font-family: var(--study-font) !important;
+}
+
+code,
+pre,
+kbd,
+samp,
+code *,
+pre * {
+  font-family: var(--code-font) !important;
+}
