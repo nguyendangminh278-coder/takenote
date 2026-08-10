@@ -1,0 +1,26 @@
+Bundled license information:
+
+@google/genai/dist/web/index.mjs:
+@google/genai/dist/web/index.mjs:
+@google/genai/dist/web/index.mjs:
+@google/genai/dist/web/index.mjs:
+@google/genai/dist/web/index.mjs:
+  /**
+   * @license
+   * Copyright 2025 Google LLC
+   * SPDX-License-Identifier: Apache-2.0
+   */
+
+@google/genai/dist/web/index.mjs:
+  /**
+   * @license
+   * Copyright 2025 Google LLC
+   * SPDX-License-Identifier: Apache-2.0
+   */
+  /**
+   * @license
+   * Copyright 2026 Google LLC
+   * SPDX-License-Identifier: Apache-2.0
+   *
+   * g3-prettier-ignore-file
+   */
