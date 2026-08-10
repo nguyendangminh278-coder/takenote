@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Không gian học đại học song ngữ Việt - Anh cho học kỳ Fall 2026." />
+    <title>HAN Study — University Learning Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pastel-theme.css" />
+    <link rel="stylesheet" href="font-override.css" />
+    <link rel="stylesheet" href="courses-extension.css" />
+    <link rel="stylesheet" href="nav-icons.css" />
+    <link rel="stylesheet" href="bigdata-session2.css" />
+    <link rel="stylesheet" href="database-merge-note.css" />
+    <link rel="stylesheet" href="course-data-update.css" />
+    <link rel="stylesheet" href="local-device-notes.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#mainContent">Bỏ qua điều hướng / Skip navigation</a>
+
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Điều hướng chính">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">H</span>
+          <div>
+            <strong>HAN STUDY</strong>
+            <small data-vi="University hub" data-en="University hub">University hub</small>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Khu vực học">
+          <button class="nav-item active" type="button" data-view="dashboard">
+            <span aria-hidden="true">⌂</span><span data-vi="Tổng quan" data-en="Overview">Tổng quan</span>
+          </button>
+          <button class="nav-item" type="button" data-view="mining">
+            <span aria-hidden="true">◇</span><span data-vi="Khai thác dữ liệu" data-en="Data Mining">Khai thác dữ liệu</span>
+          </button>
+          <button class="nav-item" type="button" data-view="database">
+            <span aria-hidden="true">▱</span><span data-vi="Quản lý CSDL" data-en="Database Management">Quản lý CSDL</span>
+          </button>
+          <button class="nav-item" type="button" data-view="schedule">
+            <span aria-hidden="true">▦</span><span data-vi="Lịch học" data-en="Schedule">Lịch học</span>
+          </button>
+          <button class="nav-item" type="button" data-view="vault">
+            <span aria-hidden="true">□</span><span data-vi="Kho tài liệu" data-en="Resource vault">Kho tài liệu</span>
+          </button>
+        </nav>
+
+        <div class="semester-card">
+          <span class="semester-dot"></span>
+          <div>
+            <small data-vi="Học kỳ hiện tại" data-en="Current semester">Học kỳ hiện tại</small>
+            <strong>Fall 2026</strong>
+            <span data-vi="Tuần 01 · 03–09/08" data-en="Week 01 · Aug 03–09">Tuần 01 · 03–09/08</span>
+          </div>
+        </div>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Mở menu">☰</button>
+          <div class="breadcrumb">
+            <span data-vi="Không gian học" data-en="Study space">Không gian học</span>
+            <b>/</b>
+            <strong id="currentViewLabel">Tổng quan</strong>
+          </div>
+          <div class="top-actions">
+            <button class="language-toggle" id="languageToggle" type="button" aria-label="Đổi ngôn ngữ">
+              <span class="active">VI</span><span>EN</span>
+            </button>
+            <div class="profile" aria-label="Hồ sơ người học">
+              <span>H</span><div><strong>Hân</strong><small data-vi="Sinh viên PTKD" data-en="Business Analytics student">Sinh viên PTKD</small></div>
+            </div>
+          </div>
+        </header>
+
+        <main id="mainContent">
+          <section class="page-view active" id="dashboard" aria-labelledby="dashboardTitle">
+            <div class="hero">
+              <div class="hero-copy">
+                <div class="hero-kicker"><span></span><b data-vi="THỨ NĂM · 06 THÁNG 08" data-en="THURSDAY · AUGUST 06">THỨ NĂM · 06 THÁNG 08</b></div>
+                <h1 id="dashboardTitle" data-vi="Học có hệ thống. Nhớ điều quan trọng." data-en="Study with structure. Remember what matters.">Học có hệ thống.<br />Nhớ điều quan trọng.</h1>
+                <p data-vi="Một nơi duy nhất cho lịch học, bài đọc trước lớp, ghi chú song ngữ và tài liệu của học kỳ." data-en="One focused place for your timetable, pre-class reading, bilingual notes and semester resources.">Một nơi duy nhất cho lịch học, bài đọc trước lớp, ghi chú song ngữ và tài liệu của học kỳ.</p>
+                <div class="hero-actions">
+                  <button class="primary-action" type="button" data-open-view="mining"><span data-vi="Bắt đầu học trước" data-en="Start pre-reading">Bắt đầu học trước</span><b>↗</b></button>
+                  <button class="text-action" type="button" data-open-view="schedule"><span data-vi="Xem lịch tuần" data-en="View this week">Xem lịch tuần</span><b>→</b></button>
+                </div>
+              </div>
+              <div class="hero-visual" aria-hidden="true">
+                <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+                <div class="visual-card card-yellow"><small>MON · 10 AUG</small><strong>03–04</strong><span>Data Mining</span></div>
+                <div class="visual-card card-white"><small>FOCUS</small><strong>CRISP<br />DM</strong><span>6 stages</span></div>
+                <div class="visual-stamp">W01</div>
+              </div>
+            </div>
+
+            <div class="metric-row" aria-label="Tổng quan học kỳ">
+              <article><span>01</span><div><strong>6</strong><small data-vi="Môn học" data-en="Courses">Môn học</small></div></article>
+              <article><span>02</span><div><strong>18</strong><small data-vi="Tín chỉ" data-en="Credits">Tín chỉ</small></div></article>
+              <article><span>03</span><div><strong id="progressMetric">0%</strong><small data-vi="Chuẩn bị tuần" data-en="Weekly prep">Chuẩn bị tuần</small></div></article>
+              <article><span>04</span><div><strong>2</strong><small data-vi="Tài liệu gốc" data-en="Source documents">Tài liệu gốc</small></div></article>
+            </div>
+
+            <div class="dashboard-grid">
+              <section class="panel focus-panel">
+                <div class="section-heading">
+                  <div><p class="eyebrow" data-vi="ƯU TIÊN TIẾP THEO" data-en="NEXT PRIORITY">ƯU TIÊN TIẾP THEO</p><h2 data-vi="Chuẩn bị trước buổi 01" data-en="Prepare before Session 01">Chuẩn bị trước buổi 01</h2></div>
+                  <button class="round-link" type="button" data-open-view="mining" aria-label="Mở môn Khai thác dữ liệu">↗</button>
+                </div>
+                <article class="focus-course">
+                  <div class="course-monogram">DM</div>
+                  <div class="focus-course-copy">
+                    <span>IST4520 · MSc. Nghĩa</span>
+                    <h3 data-vi="Khai thác dữ liệu" data-en="Data Mining">Khai thác dữ liệu</h3>
+                    <p data-vi="Đọc CRISP-DM, cài môi trường và hiểu cách biến câu hỏi kinh doanh thành bài toán dữ liệu." data-en="Read CRISP-DM, set up your environment and learn to turn a business question into a data task.">Đọc CRISP-DM, cài môi trường và hiểu cách biến câu hỏi kinh doanh thành bài toán dữ liệu.</p>
+                  </div>
+                </article>
+                <div class="task-list compact" data-task-group="dashboard">
+                  <label><input type="checkbox" data-task="read-ch1" /><span><b data-vi="Đọc nền tảng" data-en="Read the foundation">Đọc nền tảng</b><small>Data Mining for the Masses · Ch. 1</small></span></label>
+                  <label><input type="checkbox" data-task="learn-crispdm" /><span><b data-vi="Ghi nhớ 6 bước" data-en="Learn the 6 stages">Ghi nhớ 6 bước</b><small>CRISP-DM lifecycle</small></span></label>
+                  <label><input type="checkbox" data-task="setup-tools" /><span><b data-vi="Kiểm tra công cụ" data-en="Verify your tools">Kiểm tra công cụ</b><small>Python / Colab + Orange</small></span></label>
+                </div>
+              </section>
+
+              <section class="panel next-panel">
+                <div class="section-heading"><div><p class="eyebrow" data-vi="BUỔI HỌC TIẾP THEO" data-en="UP NEXT">BUỔI HỌC TIẾP THEO</p><h2 data-vi="Thứ Hai, 10/08" data-en="Monday, Aug 10">Thứ Hai, 10/08</h2></div><span class="live-pill" data-vi="2 lớp" data-en="2 classes">2 lớp</span></div>
+                <div class="timeline-item"><time>01–02</time><span class="timeline-line blue"></span><div><strong data-vi="Phân tích dữ liệu lớn" data-en="Big Data Analytics">Phân tích dữ liệu lớn</strong><small>Thầy Huấn · A2-612</small></div></div>
+                <div class="timeline-item"><time>03–04</time><span class="timeline-line yellow"></span><div><strong data-vi="Khai thác dữ liệu" data-en="Data Mining">Khai thác dữ liệu</strong><small>Thầy Nghĩa · A2-612</small></div></div>
+                <button class="schedule-link" type="button" data-open-view="schedule"><span data-vi="Mở toàn bộ thời khóa biểu" data-en="Open full timetable">Mở toàn bộ thời khóa biểu</span><b>→</b></button>
+              </section>
+            </div>
+
+            <section class="courses-section">
+              <div class="section-heading"><div><p class="eyebrow" data-vi="HỌC KỲ FALL 2026" data-en="FALL 2026 SEMESTER">HỌC KỲ FALL 2026</p><h2 data-vi="Các môn của bạn" data-en="Your courses">Các môn của bạn</h2></div><span class="muted-note" data-vi="Tất cả học bằng tiếng Anh" data-en="All taught in English">Tất cả học bằng tiếng Anh</span></div>
+              <div class="course-grid" id="courseGrid"></div>
+            </section>
+          </section>
+
+          <section class="page-view lesson-page" id="mining" aria-labelledby="miningTitle">
+            <div class="course-hero mining-hero">
+              <div><p class="eyebrow">IST4520 · FALL 2026</p><h1 id="miningTitle" data-vi="Khai thác dữ liệu" data-en="Data Mining">Khai thác dữ liệu</h1><p data-vi="Lộ trình chuẩn bị trước Buổi 01 · Thầy Nghĩa" data-en="Pre-class roadmap for Session 01 · MSc. Nghĩa">Lộ trình chuẩn bị trước Buổi 01 · Thầy Nghĩa</p></div>
+              <div class="course-meta"><span><small data-vi="Lịch" data-en="Schedule">Lịch</small><b data-vi="Thứ Hai · 03–04" data-en="Monday · 03–04">Thứ Hai · 03–04</b></span><span><small data-vi="Phòng" data-en="Room">Phòng</small><b>A2-612</b></span><span><small data-vi="Tín chỉ" data-en="Credits">Tín chỉ</small><b>03</b></span></div>
+            </div>
+
+            <div class="lesson-layout">
+              <aside class="lesson-index">
+                <p data-vi="TRONG MODULE NÀY" data-en="IN THIS MODULE">TRONG MODULE NÀY</p>
+                <a href="#dm-outcomes"><span>01</span><b data-vi="Mục tiêu" data-en="Outcomes">Mục tiêu</b></a>
+                <a href="#dm-concepts"><span>02</span><b data-vi="Khái niệm nền" data-en="Core concepts">Khái niệm nền</b></a>
+                <a href="#dm-crisp"><span>03</span><b>CRISP-DM</b></a>
+                <a href="#dm-setup"><span>04</span><b data-vi="Cài đặt" data-en="Setup">Cài đặt</b></a>
+                <a href="#dm-check"><span>05</span><b data-vi="Tự kiểm tra" data-en="Knowledge check">Tự kiểm tra</b></a>
+              </aside>
+
+              <div class="lesson-content">
+                <section class="lesson-block" id="dm-outcomes">
+                  <p class="eyebrow" data-vi="01 · ĐÍCH ĐẾN" data-en="01 · OUTCOMES">01 · ĐÍCH ĐẾN</p>
+                  <h2 data-vi="Sau 45 phút, bạn cần nói được…" data-en="After 45 minutes, you should be able to…">Sau 45 phút, bạn cần nói được…</h2>
+                  <div class="outcome-grid">
+                    <article><span>01</span><p data-vi="Data mining khác báo cáo mô tả thông thường ở điểm nào." data-en="How data mining differs from ordinary descriptive reporting.">Data mining khác báo cáo mô tả thông thường ở điểm nào.</p></article>
+                    <article><span>02</span><p data-vi="Sáu giai đoạn CRISP-DM và vì sao quy trình có tính lặp." data-en="The six CRISP-DM stages and why the process is iterative.">Sáu giai đoạn CRISP-DM và vì sao quy trình có tính lặp.</p></article>
+                    <article><span>03</span><p data-vi="Một câu hỏi kinh doanh được chuyển thành nhiệm vụ phân tích ra sao." data-en="How a business question becomes an analytical task.">Một câu hỏi kinh doanh được chuyển thành nhiệm vụ phân tích ra sao.</p></article>
+                  </div>
+                </section>
+
+                <section class="lesson-block" id="dm-concepts">
+                  <p class="eyebrow" data-vi="02 · KHÁI NIỆM NỀN" data-en="02 · CORE CONCEPTS">02 · KHÁI NIỆM NỀN</p>
+                  <h2 data-vi="Khai thác dữ liệu = tìm mẫu có ích" data-en="Data mining = finding useful patterns">Khai thác dữ liệu = tìm mẫu có ích</h2>
+                  <p class="lead" data-vi="Đó là quá trình khám phá mẫu, quan hệ và tín hiệu trong dữ liệu để hỗ trợ quyết định — không chỉ tạo thêm một bảng tổng hợp." data-en="It is the process of discovering patterns, relationships and signals in data to support decisions — not simply producing another summary table.">Đó là quá trình khám phá mẫu, quan hệ và tín hiệu trong dữ liệu để hỗ trợ quyết định — không chỉ tạo thêm một bảng tổng hợp.</p>
+                  <div class="compare-card">
+                    <div><span>DESCRIBE</span><h3 data-vi="Điều gì đã xảy ra?" data-en="What happened?">Điều gì đã xảy ra?</h3><p data-vi="Doanh thu tháng này, nhóm khách hàng, tỷ lệ rời bỏ." data-en="This month's revenue, customer groups, churn rate.">Doanh thu tháng này, nhóm khách hàng, tỷ lệ rời bỏ.</p></div>
+                    <b aria-hidden="true">→</b>
+                    <div><span>DISCOVER / PREDICT</span><h3 data-vi="Mẫu nào đáng hành động?" data-en="Which pattern deserves action?">Mẫu nào đáng hành động?</h3><p data-vi="Ai có khả năng rời bỏ, sản phẩm nào thường được mua cùng." data-en="Who is likely to churn; which products are frequently bought together.">Ai có khả năng rời bỏ, sản phẩm nào thường được mua cùng.</p></div>
+                  </div>
+                  <div class="note-callout"><b>Business first.</b><p data-vi="Mô hình tốt nhưng không trả lời đúng câu hỏi kinh doanh vẫn là một phân tích chưa tốt." data-en="A strong model that answers the wrong business question is still a weak analysis.">Mô hình tốt nhưng không trả lời đúng câu hỏi kinh doanh vẫn là một phân tích chưa tốt.</p></div>
+                </section>
+
+                <section class="lesson-block" id="dm-crisp">
+                  <p class="eyebrow">03 · CRISP-DM</p>
+                  <h2 data-vi="Một vòng lặp, không phải đường thẳng" data-en="A loop, not a straight line">Một vòng lặp, không phải đường thẳng</h2>
+                  <div class="crisp-flow" aria-label="Sáu bước CRISP-DM">
+                    <article><span>01</span><b data-vi="Hiểu kinh doanh" data-en="Business understanding">Hiểu kinh doanh</b><small data-vi="Mục tiêu, ràng buộc, tiêu chí thành công" data-en="Goals, constraints, success criteria">Mục tiêu, ràng buộc, tiêu chí thành công</small></article>
+                    <article><span>02</span><b data-vi="Hiểu dữ liệu" data-en="Data understanding">Hiểu dữ liệu</b><small data-vi="Thu thập, mô tả, khám phá, chất lượng" data-en="Collect, describe, explore, verify quality">Thu thập, mô tả, khám phá, chất lượng</small></article>
+                    <article><span>03</span><b data-vi="Chuẩn bị dữ liệu" data-en="Data preparation">Chuẩn bị dữ liệu</b><small data-vi="Chọn, làm sạch, biến đổi" data-en="Select, clean, transform">Chọn, làm sạch, biến đổi</small></article>
+                    <article><span>04</span><b data-vi="Mô hình hóa" data-en="Modeling">Mô hình hóa</b><small data-vi="Chọn kỹ thuật, huấn luyện, tinh chỉnh" data-en="Select, train and tune techniques">Chọn kỹ thuật, huấn luyện, tinh chỉnh</small></article>
+                    <article><span>05</span><b data-vi="Đánh giá" data-en="Evaluation">Đánh giá</b><small data-vi="Đúng kỹ thuật và có ích cho kinh doanh?" data-en="Technically sound and useful to the business?">Đúng kỹ thuật và có ích cho kinh doanh?</small></article>
+                    <article><span>06</span><b data-vi="Triển khai" data-en="Deployment">Triển khai</b><small data-vi="Đưa insight vào quyết định" data-en="Put insights into decisions">Đưa insight vào quyết định</small></article>
+                  </div>
+                </section>
+
+                <section class="lesson-block" id="dm-setup">
+                  <p class="eyebrow" data-vi="04 · CHUẨN BỊ MÔI TRƯỜNG" data-en="04 · ENVIRONMENT SETUP">04 · CHUẨN BỊ MÔI TRƯỜNG</p>
+                  <div class="section-heading inline"><h2 data-vi="Checklist trước khi đến lớp" data-en="Checklist before class">Checklist trước khi đến lớp</h2><a class="source-link" href="https://nghianguyen7171.github.io/Data_mining/assignments/lab0-setup.html" target="_blank" rel="noreferrer" data-vi="Mở hướng dẫn gốc ↗" data-en="Open source guide ↗">Mở hướng dẫn gốc ↗</a></div>
+                  <div class="setup-grid task-list" data-task-group="setup">
+                    <label><input type="checkbox" data-task="python" /><span><b>Python 3 + pandas</b><small><code>python --version</code> · <code>pip install pandas</code></small></span></label>
+                    <label><input type="checkbox" data-task="vscode" /><span><b>VS Code</b><small data-vi="Python extension + Jupyter extension" data-en="Python extension + Jupyter extension">Python extension + Jupyter extension</small></span></label>
+                    <label><input type="checkbox" data-task="orange" /><span><b>Orange Data Mining</b><small data-vi="Công cụ chính, không cần cài Python riêng" data-en="Primary tool; bundles its own Python">Công cụ chính, không cần cài Python riêng</small></span></label>
+                    <label><input type="checkbox" data-task="verify" /><span><b data-vi="Chạy kiểm tra" data-en="Run verification">Chạy kiểm tra</b><small><code>import pandas as pd</code> → “pandas ready”</small></span></label>
+                  </div>
+                  <div class="fallback-card"><span>PLAN B</span><div><h3>Google Colab</h3><p data-vi="Nếu cài đặt cục bộ gặp lỗi, Colab đã có sẵn pandas và đủ để hoàn thành môn học." data-en="If local setup fails, Colab already includes pandas and is sufficient for the course.">Nếu cài đặt cục bộ gặp lỗi, Colab đã có sẵn pandas và đủ để hoàn thành môn học.</p></div><a href="https://colab.research.google.com" target="_blank" rel="noreferrer">Open ↗</a></div>
+                </section>
+
+                <section class="lesson-block" id="dm-check">
+                  <p class="eyebrow" data-vi="05 · TỰ KIỂM TRA" data-en="05 · KNOWLEDGE CHECK">05 · TỰ KIỂM TRA</p>
+                  <h2 data-vi="Bạn đã sẵn sàng cho buổi 01?" data-en="Are you ready for Session 01?">Bạn đã sẵn sàng cho buổi 01?</h2>
+                  <div class="quiz-card" data-answer="b">
+                    <p><b>01.</b> <span data-vi="Bước nào của CRISP-DM xác định mục tiêu và tiêu chí thành công?" data-en="Which CRISP-DM stage defines objectives and success criteria?">Bước nào của CRISP-DM xác định mục tiêu và tiêu chí thành công?</span></p>
+                    <div class="quiz-options"><button type="button" data-choice="a">A · Data preparation</button><button type="button" data-choice="b">B · Business understanding</button><button type="button" data-choice="c">C · Modeling</button></div>
+                    <div class="quiz-feedback" aria-live="polite"></div>
+                  </div>
+                  <div class="reading-card"><div><span>MAIN TEXTBOOK</span><h3>Data Mining for the Masses</h3><p>Matthew North · 2012 · Creative Commons</p></div><a href="https://www.betterevaluation.org/sites/default/files/2023-05/DataMiningForTheMasses.pdf" target="_blank" rel="noreferrer"><span data-vi="Đọc PDF" data-en="Read PDF">Đọc PDF</span> ↗</a></div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section class="page-view lesson-page" id="database" aria-labelledby="databaseTitle">
+            <div class="course-hero database-hero">
+              <div><p class="eyebrow">IST2610 · SESSION 01–02</p><h1 id="databaseTitle" data-vi="Quản lý CSDL trong kinh doanh" data-en="Database Management in Business">Quản lý CSDL trong kinh doanh</h1><p data-vi="Bản đồ kiến thức ERM & ERD · Thầy Trần Đức Minh" data-en="ERM & ERD knowledge map · Dr. Tran Duc Minh">Bản đồ kiến thức ERM & ERD · Thầy Trần Đức Minh</p></div>
+              <div class="course-meta"><span><small data-vi="Lịch" data-en="Schedule">Lịch</small><b data-vi="Thứ Tư · 03–04" data-en="Wednesday · 03–04">Thứ Tư · 03–04</b></span><span><small data-vi="Slide" data-en="Slides">Slide</small><b>51 pages</b></span><span><small data-vi="Bài tập" data-en="Exercise">Bài tập</small><b>Sweet Home</b></span></div>
+            </div>
+
+            <div class="database-summary">
+              <section class="panel concept-map">
+                <p class="eyebrow" data-vi="BẢN ĐỒ BUỔI 01–02" data-en="SESSION 01–02 MAP">BẢN ĐỒ BUỔI 01–02</p>
+                <h2 data-vi="Từ yêu cầu kinh doanh đến ERD" data-en="From business requirements to an ERD">Từ yêu cầu kinh doanh đến ERD</h2>
+                <div class="model-pipeline"><div><span>01</span><b data-vi="Tìm danh từ" data-en="Find nouns">Tìm danh từ</b><small>Entities</small></div><i>→</i><div><span>02</span><b data-vi="Mô tả đặc điểm" data-en="Describe properties">Mô tả đặc điểm</b><small>Attributes + domains</small></div><i>→</i><div><span>03</span><b data-vi="Tìm động từ" data-en="Find verbs">Tìm động từ</b><small>Relationships</small></div><i>→</i><div><span>04</span><b data-vi="Chốt quy tắc" data-en="Set constraints">Chốt quy tắc</b><small>Keys + cardinality</small></div></div>
+              </section>
+
+              <section class="glossary-section">
+                <div class="section-heading"><div><p class="eyebrow" data-vi="TỪ KHÓA CỐT LÕI" data-en="CORE VOCABULARY">TỪ KHÓA CỐT LÕI</p><h2 data-vi="Hiểu đúng trước khi vẽ" data-en="Understand before you draw">Hiểu đúng trước khi vẽ</h2></div><span class="muted-note" data-vi="Nhấn để mở rộng" data-en="Tap to expand">Nhấn để mở rộng</span></div>
+                <div class="glossary-grid">
+                  <details open><summary><span>01</span><b>Entity</b><i>+</i></summary><p data-vi="Đối tượng mà người dùng quan tâm. Trong mô hình quan hệ, entity thường ánh xạ thành bảng; mỗi occurrence ánh xạ thành một dòng." data-en="An object of interest. In the relational model, an entity usually maps to a table and each occurrence maps to a row.">Đối tượng mà người dùng quan tâm. Trong mô hình quan hệ, entity thường ánh xạ thành bảng; mỗi occurrence ánh xạ thành một dòng.</p></details>
+                  <details><summary><span>02</span><b>Attribute</b><i>+</i></summary><p data-vi="Đặc điểm của entity: bắt buộc/tùy chọn, đơn/phức hợp, đơn trị/đa trị hoặc dẫn xuất. Mỗi attribute có một domain." data-en="A property of an entity: required/optional, simple/composite, single/multivalued or derived. Every attribute has a domain.">Đặc điểm của entity: bắt buộc/tùy chọn, đơn/phức hợp, đơn trị/đa trị hoặc dẫn xuất. Mỗi attribute có một domain.</p></details>
+                  <details><summary><span>03</span><b>Identifier / PK</b><i>+</i></summary><p data-vi="Một hoặc nhiều attribute nhận diện duy nhất mỗi instance. Composite identifier gồm nhiều attribute." data-en="One or more attributes that uniquely identify each instance. A composite identifier uses multiple attributes.">Một hoặc nhiều attribute nhận diện duy nhất mỗi instance. Composite identifier gồm nhiều attribute.</p></details>
+                  <details><summary><span>04</span><b>Relationship</b><i>+</i></summary><p data-vi="Liên kết giữa các entity, nên được đặt tên bằng động từ và phải được đọc theo cả hai chiều." data-en="An association between entities, named with a verb and read in both directions.">Liên kết giữa các entity, nên được đặt tên bằng động từ và phải được đọc theo cả hai chiều.</p></details>
+                  <details><summary><span>05</span><b>Cardinality</b><i>+</i></summary><p data-vi="Số occurrence tối thiểu và tối đa tham gia quan hệ: 0..1, 1..1, 0..*, 1..*. Connectivity phân loại 1:1, 1:M, M:N." data-en="Minimum and maximum occurrences in a relationship: 0..1, 1..1, 0..*, 1..*. Connectivity classifies 1:1, 1:M and M:N.">Số occurrence tối thiểu và tối đa tham gia quan hệ: 0..1, 1..1, 0..*, 1..*. Connectivity phân loại 1:1, 1:M, M:N.</p></details>
+                  <details><summary><span>06</span><b>Weak entity</b><i>+</i></summary><p data-vi="Entity phụ thuộc tồn tại và có khóa chính nhận một phần hoặc toàn bộ từ parent entity." data-en="An existence-dependent entity whose primary key is partly or wholly derived from its parent.">Entity phụ thuộc tồn tại và có khóa chính nhận một phần hoặc toàn bộ từ parent entity.</p></details>
+                </div>
+              </section>
+
+              <section class="cardinality-lab">
+                <div><p class="eyebrow" data-vi="ĐỌC CROW'S FOOT" data-en="READING CROW'S FOOT">ĐỌC CROW'S FOOT</p><h2 data-vi="Luôn đọc quan hệ theo hai chiều" data-en="Always read a relationship both ways">Luôn đọc quan hệ theo hai chiều</h2><p data-vi="Một Category chứa nhiều Product; mỗi Product thuộc đúng một Category." data-en="One Category contains many Products; each Product belongs to exactly one Category.">Một Category chứa nhiều Product; mỗi Product thuộc đúng một Category.</p></div>
+                <div class="erd-mini" aria-label="Category one to many Product"><div><b>CATEGORY</b><small>PK category_id</small></div><span class="relation-line"><i></i><em>1</em><b>contains</b><em>0..*</em><i class="crow"></i></span><div><b>PRODUCT</b><small>FK category_id</small></div></div>
+              </section>
+
+              <section class="exercise-section">
+                <div class="section-heading"><div><p class="eyebrow">EXERCISE 01 · SWEET HOME</p><h2 data-vi="Từ mô tả cửa hàng đến 7 entity" data-en="From store narrative to 7 entities">Từ mô tả cửa hàng đến 7 entity</h2></div><a class="source-link" href="docs/Exercise_01.pdf" target="_blank" data-vi="Mở đề gốc ↗" data-en="Open source exercise ↗">Mở đề gốc ↗</a></div>
+                <div class="entity-strip" aria-label="Các thực thể bài tập"><span>Category</span><span>Product</span><span>Position</span><span>Employee</span><span>Customer</span><span>Invoice</span><span>Invoice Detail</span></div>
+                <div class="exercise-grid">
+                  <article><span>STEP 01</span><h3 data-vi="Mô hình khái niệm (ERM)" data-en="Conceptual model (ERM)">Mô hình khái niệm (ERM)</h3><ul><li data-vi="Xác định entity và attribute" data-en="Identify entities and attributes">Xác định entity và attribute</li><li data-vi="Phân loại PK, required, optional" data-en="Classify PK, required and optional">Phân loại PK, required, optional</li><li data-vi="Mô tả domain theo ngữ nghĩa" data-en="Describe semantic domains">Mô tả domain theo ngữ nghĩa</li><li data-vi="Vẽ quan hệ 1–N và multiplicity" data-en="Draw 1–N relationships and multiplicity">Vẽ quan hệ 1–N và multiplicity</li></ul></article>
+                  <article><span>STEP 02</span><h3 data-vi="Mô hình logic (ERD)" data-en="Logical model (ERD)">Mô hình logic (ERD)</h3><ul><li data-vi="Chuyển PK/FK sang bảng" data-en="Map PK/FK into tables">Chuyển PK/FK sang bảng</li><li data-vi="Chọn kiểu dữ liệu DBMS" data-en="Choose DBMS data types">Chọn kiểu dữ liệu DBMS</li><li data-vi="Hiển thị NULL / NOT NULL" data-en="Show NULL / NOT NULL">Hiển thị NULL / NOT NULL</li><li data-vi="Tách M:N bằng Invoice Detail" data-en="Resolve M:N with Invoice Detail">Tách M:N bằng Invoice Detail</li></ul></article>
+                  <aside><b data-vi="Điểm dễ mất" data-en="Common mistake">Điểm dễ mất</b><p data-vi="Invoice Detail cần khóa ghép (invoice_id, product_id) hoặc một surrogate key kèm unique constraint; đồng thời lưu quantity và unit_price tại thời điểm bán." data-en="Invoice Detail needs a composite key (invoice_id, product_id), or a surrogate key plus a unique constraint; it must store quantity and unit_price at the time of sale.">Invoice Detail cần khóa ghép (invoice_id, product_id) hoặc một surrogate key kèm unique constraint; đồng thời lưu quantity và unit_price tại thời điểm bán.</p></aside>
+                </div>
+                <div class="task-list database-tasks" data-task-group="database">
+                  <label><input type="checkbox" data-task="db-glossary" /><span><b data-vi="Ôn 6 từ khóa" data-en="Review 6 key terms">Ôn 6 từ khóa</b><small>Entity → weak entity</small></span></label>
+                  <label><input type="checkbox" data-task="db-entities" /><span><b data-vi="Lập bảng 7 entity" data-en="List the 7 entities">Lập bảng 7 entity</b><small>PK · attributes · domain</small></span></label>
+                  <label><input type="checkbox" data-task="db-erd" /><span><b data-vi="Vẽ ERM rồi ERD" data-en="Draw ERM, then ERD">Vẽ ERM rồi ERD</b><small>Crow's Foot · 1–N only</small></span></label>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <section class="page-view" id="schedule" aria-labelledby="scheduleTitle">
+            <div class="page-title"><p class="eyebrow">FALL 2026 · 03/08–29/11</p><h1 id="scheduleTitle" data-vi="Thời khóa biểu" data-en="Weekly timetable">Thời khóa biểu</h1><p data-vi="6 môn · 18 tín chỉ · Phòng A2-612" data-en="6 courses · 18 credits · Room A2-612">6 môn · 18 tín chỉ · Phòng A2-612</p></div>
+            <div class="schedule-board">
+              <div class="time-column"><span></span><b>01–02</b><b>03–04</b></div>
+              <section><header><span>MON</span><b data-vi="Thứ Hai" data-en="Monday">Thứ Hai</b></header><article class="slot blue"><small>01–02 · A2-612</small><strong data-vi="Phân tích dữ liệu lớn" data-en="Big Data Analytics">Phân tích dữ liệu lớn</strong><span>IST2510 · Thầy Huấn</span></article><article class="slot yellow"><small>03–04 · A2-612</small><strong data-vi="Khai thác dữ liệu" data-en="Data Mining">Khai thác dữ liệu</strong><span>IST4520 · Thầy Nghĩa</span></article></section>
+              <section><header><span>TUE</span><b data-vi="Thứ Ba" data-en="Tuesday">Thứ Ba</b></header><article class="slot lilac"><small>01–02 · A2-612</small><strong data-vi="Ra quyết định trong KD" data-en="Business Decision Making">Ra quyết định trong KD</strong><span>IST3500 · Lewis</span></article><article class="slot coral"><small>03–04 · A2-612</small><strong data-vi="Hoạch định & chính sách HTTT" data-en="IS Planning & Policy">Hoạch định & chính sách HTTT</strong><span>IST4120 · Shaoyi</span></article></section>
+              <section><header><span>WED</span><b data-vi="Thứ Tư" data-en="Wednesday">Thứ Tư</b></header><article class="slot green"><small>01–02 · A2-612</small><strong data-vi="Phân tích dữ liệu nâng cao" data-en="Advanced Data Analytics">Phân tích dữ liệu nâng cao</strong><span>IST4510 · Mitch</span></article><article class="slot navy"><small>03–04 · A2-612</small><strong data-vi="Quản lý CSDL trong KD" data-en="Database Management">Quản lý CSDL trong KD</strong><span>IST2610 · Đức Minh</span></article></section>
+            </div>
+            <div class="schedule-notes"><article><span>!</span><div><b data-vi="Mốc bắt đầu khác nhau" data-en="Different start dates">Mốc bắt đầu khác nhau</b><p data-vi="Khai thác dữ liệu bắt đầu 10/08; Hoạch định & chính sách HTTT bắt đầu 17/08. Các môn còn lại bắt đầu 03/08." data-en="Data Mining starts Aug 10; IS Planning & Policy starts Aug 17. Other courses start Aug 03.">Khai thác dữ liệu bắt đầu 10/08; Hoạch định & chính sách HTTT bắt đầu 17/08. Các môn còn lại bắt đầu 03/08.</p></div></article><article><span>⌁</span><div><b data-vi="Ngôn ngữ giảng dạy" data-en="Teaching language">Ngôn ngữ giảng dạy</b><p data-vi="Tất cả 6 học phần được ghi là Tiếng Anh trong thời khóa biểu gốc." data-en="All six modules are marked as English-taught in the source timetable.">Tất cả 6 học phần được ghi là Tiếng Anh trong thời khóa biểu gốc.</p></div></article></div>
+          </section>
+
+          <section class="page-view" id="vault" aria-labelledby="vaultTitle">
+            <div class="page-title"><p class="eyebrow" data-vi="TẤT CẢ Ở MỘT NƠI" data-en="EVERYTHING IN ONE PLACE">TẤT CẢ Ở MỘT NƠI</p><h1 id="vaultTitle" data-vi="Kho tài liệu" data-en="Resource vault">Kho tài liệu</h1><p data-vi="Tài liệu gốc, textbook và công cụ học tập đã được sắp theo môn." data-en="Source documents, textbooks and study tools organized by course.">Tài liệu gốc, textbook và công cụ học tập đã được sắp theo môn.</p></div>
+            <div class="vault-grid">
+              <article class="resource-card local"><span class="file-type">PDF</span><div><small>IST2610 · LOCAL</small><h2>Session 01–02</h2><p data-vi="51 trang · Introduction to ER Model" data-en="51 pages · Introduction to ER Model">51 trang · Introduction to ER Model</p></div><a href="docs/Session_01_02.pdf" target="_blank"><span data-vi="Mở tài liệu" data-en="Open document">Mở tài liệu</span> ↗</a></article>
+              <article class="resource-card local"><span class="file-type">PDF</span><div><small>IST2610 · LOCAL</small><h2>Exercise 01</h2><p>Sweet Home confectionery store ERM & ERD</p></div><a href="docs/Exercise_01.pdf" target="_blank"><span data-vi="Mở đề bài" data-en="Open exercise">Mở đề bài</span> ↗</a></article>
+              <article class="resource-card web"><span class="file-type">WEB</span><div><small>IST4520 · COURSE</small><h2>Data Mining</h2><p data-vi="Trang môn học chính thức của thầy Nghĩa" data-en="Official course site by MSc. Nghĩa">Trang môn học chính thức của thầy Nghĩa</p></div><a href="https://nghianguyen7171.github.io/Data_mining/" target="_blank" rel="noreferrer"><span data-vi="Mở course site" data-en="Open course site">Mở course site</span> ↗</a></article>
+              <article class="resource-card book"><span class="file-type">BOOK</span><div><small>IST4520 · TEXTBOOK</small><h2>Data Mining for the Masses</h2><p>Matthew North · 2012 · Creative Commons</p></div><a href="https://www.betterevaluation.org/sites/default/files/2023-05/DataMiningForTheMasses.pdf" target="_blank" rel="noreferrer"><span data-vi="Đọc textbook" data-en="Read textbook">Đọc textbook</span> ↗</a></article>
+              <article class="resource-card tool"><span class="file-type">APP</span><div><small>IST4520 · PRIMARY TOOL</small><h2>Orange Data Mining</h2><p data-vi="Tải bản standalone theo hệ điều hành" data-en="Download the standalone build for your OS">Tải bản standalone theo hệ điều hành</p></div><a href="https://orangedatamining.com/download" target="_blank" rel="noreferrer"><span data-vi="Tải Orange" data-en="Download Orange">Tải Orange</span> ↗</a></article>
+              <article class="resource-card guide"><span class="file-type">GUIDE</span><div><small>IST4520 · LAB 0</small><h2>Environment Setup</h2><p>Python · VS Code · Colab · Orange · HDI workflow</p></div><a href="https://nghianguyen7171.github.io/Data_mining/assignments/lab0-setup.html" target="_blank" rel="noreferrer"><span data-vi="Mở hướng dẫn" data-en="Open setup guide">Mở hướng dẫn</span> ↗</a></article>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div class="mobile-nav" aria-label="Điều hướng di động">
+      <button class="active" type="button" data-view="dashboard">⌂<small data-vi="Tổng quan" data-en="Overview">Tổng quan</small></button>
+      <button type="button" data-view="mining">◇<small>Mining</small></button>
+      <button type="button" data-view="database">▱<small>Database</small></button>
+      <button type="button" data-view="schedule">▦<small data-vi="Lịch" data-en="Schedule">Lịch</small></button>
+      <button type="button" data-view="vault">□<small data-vi="Tài liệu" data-en="Vault">Tài liệu</small></button>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="courses-extension.js"></script>
+    <script src="nav-icons.js"></script>
+    <script src="bigdata-session2.js"></script>
+    <script src="database-merge-note.js"></script>
+    <script src="course-data-update.js"></script>
+    <script src="local-device-notes.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+/* Icon-first six-course navigation */
+.course-nav-item {
+  min-height: 62px;
+  padding: 7px 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.course-nav-item > .course-nav-mark:first-child {
+  width: 29px;
+  height: 29px;
+  flex-basis: 29px;
+  color: #626b7c;
+}
+
+.course-nav-mark svg,
+.mobile-course-icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.course-nav-item > span:last-child {
+  width: 100%;
+  display: block;
+}
+
+.course-nav-item > span:last-child b {
+  display: block;
+  overflow: visible;
+  color: #555d6c;
+  font-size: 9px;
+  line-height: 1.15;
+  text-align: center;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+.mobile-nav button {
+  min-width: 0;
+  padding: 5px 2px;
+}
+
+.mobile-course-icon {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+}
+
+.mobile-course-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.mobile-nav small {
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 7px;
+  line-height: 1.1;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-height: 760px) and (min-width: 821px) {
+  .course-nav-item {
+    min-height: 54px;
+    padding-block: 5px;
+  }
+
+  .course-nav-item > .course-nav-mark:first-child {
+    width: 25px;
+    height: 25px;
+  }
+
+  .course-nav-mark svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .semester-card {
+    margin-top: 10px;
+  }
+}
