@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="database-merge-note.css" />
     <link rel="stylesheet" href="course-data-update.css" />
     <link rel="stylesheet" href="sql-ba-notes.css" />
+    <link rel="stylesheet" href="study-planner.css" />
     <link rel="stylesheet" href="local-device-notes.css" />
     <link rel="stylesheet" href="ai-study-chat.css" />
   </head>
@@ -78,6 +79,40 @@
 
         <main id="mainContent">
           <section class="page-view active" id="dashboard" aria-labelledby="dashboardTitle">
+            <section class="study-planner" id="studyPlanner" aria-labelledby="studyPlannerTitle">
+              <header class="planner-header">
+                <div class="planner-title-row">
+                  <span class="planner-calendar-mark" aria-hidden="true">▦</span>
+                  <div>
+                    <p class="eyebrow" data-vi="KẾ HOẠCH GẦN NHẤT" data-en="COMING UP">KẾ HOẠCH GẦN NHẤT</p>
+                    <h2 id="studyPlannerTitle" data-vi="Lịch học & deadline" data-en="Classes & deadlines">Lịch học & deadline</h2>
+                    <time class="planner-today" id="plannerToday"></time>
+                  </div>
+                </div>
+                <div class="planner-sync">
+                  <span class="planner-status" id="plannerStatus" aria-live="polite">Đang kết nối lịch...</span>
+                  <button class="planner-refresh" id="refreshStudyPlanner" type="button" aria-label="Làm mới lịch học và deadline">↻</button>
+                </div>
+              </header>
+
+              <div class="planner-grid">
+                <section class="planner-column planner-classes" aria-labelledby="plannerClassesTitle">
+                  <div class="planner-column-heading">
+                    <div><span aria-hidden="true">●</span><h3 id="plannerClassesTitle" data-vi="Buổi học sắp tới" data-en="Upcoming classes">Buổi học sắp tới</h3></div>
+                    <span class="planner-count" id="plannerClassCount">—</span>
+                  </div>
+                  <div class="planner-list" id="plannerClassList" aria-live="polite"><div class="planner-loading"></div></div>
+                </section>
+
+                <section class="planner-column planner-deadlines" aria-labelledby="plannerDeadlinesTitle">
+                  <div class="planner-column-heading">
+                    <div><span aria-hidden="true">!</span><h3 id="plannerDeadlinesTitle" data-vi="Deadline cần nhớ" data-en="Deadlines to remember">Deadline cần nhớ</h3></div>
+                    <span class="planner-count" id="plannerDeadlineCount">—</span>
+                  </div>
+                  <div class="planner-list" id="plannerDeadlineList" aria-live="polite"><div class="planner-loading"></div></div>
+                </section>
+              </div>
+            </section>
             <div class="hero">
               <div class="hero-copy">
                 <div class="hero-kicker"><span></span><b data-vi="THỨ NĂM · 06 THÁNG 08" data-en="THURSDAY · AUGUST 06">THỨ NĂM · 06 THÁNG 08</b></div>
@@ -304,6 +339,7 @@
     <script src="database-merge-note.js"></script>
     <script src="course-data-update.js"></script>
     <script src="sql-ba-notes.js"></script>
+    <script src="study-planner.js"></script>
     <script src="local-device-notes.js"></script>
     <script type="module" src="ai-study-chat.js"></script>
   </body>

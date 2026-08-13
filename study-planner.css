@@ -1,0 +1,340 @@
+.study-planner {
+  margin: 0 calc(clamp(22px, 4vw, 58px) * -1);
+  padding: 24px clamp(22px, 4vw, 58px) 26px;
+  background: #fffdf9;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+.study-planner::before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  right: -92px;
+  top: -118px;
+  background: #eaf1ff;
+  box-shadow: -145px 68px 0 24px #fff3c9;
+  opacity: .72;
+  pointer-events: none;
+}
+
+.planner-header,
+.planner-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.planner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 17px;
+}
+
+.planner-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.planner-calendar-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: #edf3ff;
+  color: #315da8;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  flex: 0 0 auto;
+}
+
+.planner-title-row h2 {
+  margin: 0;
+  font: 600 25px/1.1 Georgia, serif;
+}
+
+.planner-today {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.planner-sync {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  min-height: 38px;
+}
+
+.planner-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #52606f;
+  background: #f3f6f4;
+  border: 1px solid #e2e9e5;
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 9px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.planner-status::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e8a54f;
+  box-shadow: 0 0 0 3px rgba(232, 165, 79, .13);
+}
+
+.planner-status.is-live::before {
+  background: #58ad87;
+  box-shadow: 0 0 0 3px rgba(88, 173, 135, .13);
+}
+
+.planner-refresh {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.planner-refresh:hover {
+  background: #f7f4ed;
+  transform: rotate(18deg);
+}
+
+.planner-refresh:disabled {
+  cursor: wait;
+  opacity: .6;
+}
+
+.planner-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  gap: 14px;
+}
+
+.planner-column {
+  min-width: 0;
+  background: rgba(255, 255, 255, .9);
+  border: 1px solid #e4e2dc;
+  border-radius: 16px;
+  padding: 15px;
+}
+
+.planner-column-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 0 2px 11px;
+}
+
+.planner-column-heading div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.planner-column-heading span:first-child {
+  width: 25px;
+  height: 25px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: #edf3ff;
+  color: #315da8;
+  font-size: 12px;
+}
+
+.planner-deadlines .planner-column-heading span:first-child {
+  background: #fff0ec;
+  color: #b64f3e;
+}
+
+.planner-column-heading h3 {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+
+.planner-count {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.planner-list {
+  display: grid;
+  gap: 8px;
+}
+
+.planner-item {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 11px;
+  min-height: 58px;
+  background: #faf9f6;
+  border: 1px solid #efede8;
+  border-radius: 12px;
+  padding: 9px 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.planner-item::before {
+  content: "";
+  position: absolute;
+  inset: 8px auto 8px 0;
+  width: 3px;
+  border-radius: 99px;
+  background: var(--planner-color, #7fa4e8);
+}
+
+.planner-date-box {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+  border-right: 1px solid #e6e3dd;
+  padding-right: 10px;
+}
+
+.planner-date-box strong {
+  font: 650 16px/1 Georgia, serif;
+}
+
+.planner-date-box small {
+  color: var(--muted);
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.planner-item-copy {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.planner-item-copy strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 11px;
+}
+
+.planner-item-copy small {
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 9px;
+}
+
+.planner-badge {
+  border-radius: 999px;
+  padding: 6px 8px;
+  background: #eef3fb;
+  color: #345d9f;
+  font-size: 8px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.planner-badge.is-soon {
+  background: #fff4cf;
+  color: #8a6812;
+}
+
+.planner-badge.is-urgent,
+.planner-badge.is-overdue {
+  background: #ffe9e4;
+  color: #ae4635;
+}
+
+.planner-empty {
+  min-height: 58px;
+  border: 1px dashed #d8d5ce;
+  border-radius: 12px;
+  background: #fbfaf7;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.planner-empty b {
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.planner-setup-link {
+  color: #315da8;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.planner-setup-link:hover {
+  text-decoration: underline;
+}
+
+.planner-loading {
+  min-height: 58px;
+  border-radius: 12px;
+  background: linear-gradient(100deg, #f4f2ed 20%, #fbfaf7 40%, #f4f2ed 60%);
+  background-size: 200% 100%;
+  animation: planner-shimmer 1.2s infinite linear;
+}
+
+@keyframes planner-shimmer {
+  to { background-position-x: -200%; }
+}
+
+@media (max-width: 980px) {
+  .planner-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+  .study-planner {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 20px 16px 22px;
+  }
+
+  .planner-header {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .planner-sync { justify-content: space-between; }
+  .planner-status { white-space: normal; }
+  .planner-title-row h2 { font-size: 22px; }
+
+  .planner-item {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .planner-badge {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
