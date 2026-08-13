@@ -2,12 +2,12 @@ const CALENDAR_SUPABASE_URL = "https://dafylvuvlknoebamxxvr.supabase.co";
 const CALENDAR_SUPABASE_KEY = "sb_publishable_uwRT04UOyTMJzFb551dOrQ_mj0oHUzA";
 
 const weeklyClassSchedule = [
-  { weekday: 1, slot: "01–02", code: "IST2510", vi: "Phân tích dữ liệu lớn", en: "Big Data Analytics", starts: "2026-08-03", color: "#3f9c74" },
-  { weekday: 1, slot: "03–04", code: "IST4520", vi: "Khai thác dữ liệu", en: "Data Mining", starts: "2026-08-10", color: "#3f9c74" },
-  { weekday: 2, slot: "01–02", code: "IST3500", vi: "Ra quyết định trong kinh doanh", en: "Business Decision Making", starts: "2026-08-03", color: "#3f9c74" },
-  { weekday: 2, slot: "03–04", code: "IST4120", vi: "Hoạch định & chính sách HTTT", en: "IS Planning & Policy", starts: "2026-08-17", color: "#3f9c74" },
-  { weekday: 3, slot: "01–02", code: "IST4510", vi: "Phân tích dữ liệu nâng cao", en: "Advanced Data Analytics", starts: "2026-08-03", color: "#3f9c74" },
-  { weekday: 3, slot: "03–04", code: "IST2610", vi: "Quản lý CSDL trong kinh doanh", en: "Database Management in Business", starts: "2026-08-03", color: "#3f9c74" }
+  { weekday: 1, slot: "06:45–09:30", code: "IST2510", vi: "Phân tích dữ liệu lớn", en: "Big Data Analytics", starts: "2026-08-03", color: "#3f9c74" },
+  { weekday: 1, slot: "09:30–12:30", code: "IST4510", vi: "Phân tích dữ liệu nâng cao", en: "Advanced Data Analytics", starts: "2026-08-03", color: "#3f9c74" },
+  { weekday: 2, slot: "06:45–09:30", code: "IST3500", vi: "Ra quyết định trong kinh doanh", en: "Business Decision Making", starts: "2026-08-03", color: "#3f9c74" },
+  { weekday: 2, slot: "09:30–12:30", code: "IST4120", vi: "Hoạch định & chính sách HTTT", en: "IS Planning & Policy", starts: "2026-08-17", color: "#3f9c74" },
+  { weekday: 3, slot: "06:45–09:45", code: "IST2610", vi: "Quản lý CSDL trong kinh doanh", en: "Database Management in Business", starts: "2026-08-03", color: "#3f9c74" },
+  { weekday: 3, slot: "09:45–12:30", code: "IST4520", vi: "Khai thác dữ liệu", en: "Data Mining", starts: "2026-08-10", color: "#3f9c74" }
 ];
 
 const supabaseCalendarState = {
