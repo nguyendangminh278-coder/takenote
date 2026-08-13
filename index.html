@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="course-data-update.css" />
     <link rel="stylesheet" href="sql-ba-notes.css" />
     <link rel="stylesheet" href="supabase-calendar.css" />
+    <link rel="stylesheet" href="deadline-agenda.css" />
     <link rel="stylesheet" href="local-device-notes.css" />
     <link rel="stylesheet" href="ai-study-chat.css" />
   </head>
@@ -133,6 +134,11 @@
                   </div>
                   <div class="calendar-footer"><span id="plannerEventSummary">—</span><small data-vi="Nhấp deadline có đường dẫn để mở bài tập" data-en="Select a linked deadline to open the assignment">Nhấp deadline có đường dẫn để mở bài tập</small></div>
                 </section>
+
+                <aside class="deadline-agenda" aria-labelledby="deadlineAgendaDate">
+                  <header class="deadline-agenda-header"><h3 id="deadlineAgendaDate">—</h3><span id="deadlineAgendaCount">0</span></header>
+                  <div class="deadline-agenda-list" id="deadlineAgendaList" aria-live="polite"></div>
+                </aside>
               </div>
             </section>
             <div class="hero">
@@ -147,17 +153,10 @@
               </div>
               <div class="hero-visual" aria-hidden="true">
                 <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-                <div class="visual-card card-yellow"><small>MON · 10 AUG</small><strong>03–04</strong><span>Data Mining</span></div>
+                <div class="visual-card card-yellow"><small>WED · 19 AUG</small><strong>09:45</strong><span>Data Mining</span></div>
                 <div class="visual-card card-white"><small>FOCUS</small><strong>CRISP<br />DM</strong><span>6 stages</span></div>
                 <div class="visual-stamp">W01</div>
               </div>
-            </div>
-
-            <div class="metric-row" aria-label="Tổng quan học kỳ">
-              <article><span>01</span><div><strong>6</strong><small data-vi="Môn học" data-en="Courses">Môn học</small></div></article>
-              <article><span>02</span><div><strong>18</strong><small data-vi="Tín chỉ" data-en="Credits">Tín chỉ</small></div></article>
-              <article><span>03</span><div><strong id="progressMetric">0%</strong><small data-vi="Chuẩn bị tuần" data-en="Weekly prep">Chuẩn bị tuần</small></div></article>
-              <article><span>04</span><div><strong>2</strong><small data-vi="Tài liệu gốc" data-en="Source documents">Tài liệu gốc</small></div></article>
             </div>
 
             <div class="dashboard-grid">
@@ -182,9 +181,9 @@
               </section>
 
               <section class="panel next-panel">
-                <div class="section-heading"><div><p class="eyebrow" data-vi="BUỔI HỌC TIẾP THEO" data-en="UP NEXT">BUỔI HỌC TIẾP THEO</p><h2 data-vi="Thứ Hai, 10/08" data-en="Monday, Aug 10">Thứ Hai, 10/08</h2></div><span class="live-pill" data-vi="2 lớp" data-en="2 classes">2 lớp</span></div>
-                <div class="timeline-item"><time>01–02</time><span class="timeline-line blue"></span><div><strong data-vi="Phân tích dữ liệu lớn" data-en="Big Data Analytics">Phân tích dữ liệu lớn</strong><small>Thầy Huấn · A2-612</small></div></div>
-                <div class="timeline-item"><time>03–04</time><span class="timeline-line yellow"></span><div><strong data-vi="Khai thác dữ liệu" data-en="Data Mining">Khai thác dữ liệu</strong><small>Thầy Nghĩa · A2-612</small></div></div>
+                <div class="section-heading"><div><p class="eyebrow" data-vi="BUỔI HỌC TIẾP THEO" data-en="UP NEXT">BUỔI HỌC TIẾP THEO</p><h2 data-vi="Thứ Hai, 17/08" data-en="Monday, Aug 17">Thứ Hai, 17/08</h2></div><span class="live-pill" data-vi="2 lớp" data-en="2 classes">2 lớp</span></div>
+                <div class="timeline-item"><time>06:45</time><span class="timeline-line blue"></span><div><strong data-vi="Phân tích dữ liệu lớn" data-en="Big Data Analytics">Phân tích dữ liệu lớn</strong><small>Thầy Huấn · Phòng 612 · 06:45–09:30</small></div></div>
+                <div class="timeline-item"><time>09:30</time><span class="timeline-line green"></span><div><strong data-vi="Phân tích dữ liệu nâng cao" data-en="Advanced Data Analytics">Phân tích dữ liệu nâng cao</strong><small>Mitch · Online · 09:30–12:30</small></div></div>
                 <button class="schedule-link" type="button" data-open-view="schedule"><span data-vi="Mở toàn bộ thời khóa biểu" data-en="Open full timetable">Mở toàn bộ thời khóa biểu</span><b>→</b></button>
               </section>
             </div>
@@ -198,7 +197,7 @@
           <section class="page-view lesson-page" id="mining" aria-labelledby="miningTitle">
             <div class="course-hero mining-hero">
               <div><p class="eyebrow">IST4520 · FALL 2026</p><h1 id="miningTitle" data-vi="Khai thác dữ liệu" data-en="Data Mining">Khai thác dữ liệu</h1><p data-vi="Lộ trình chuẩn bị trước Buổi 01 · Thầy Nghĩa" data-en="Pre-class roadmap for Session 01 · MSc. Nghĩa">Lộ trình chuẩn bị trước Buổi 01 · Thầy Nghĩa</p></div>
-              <div class="course-meta"><span><small data-vi="Lịch" data-en="Schedule">Lịch</small><b data-vi="Thứ Hai · 03–04" data-en="Monday · 03–04">Thứ Hai · 03–04</b></span><span><small data-vi="Phòng" data-en="Room">Phòng</small><b>A2-612</b></span><span><small data-vi="Tín chỉ" data-en="Credits">Tín chỉ</small><b>03</b></span></div>
+              <div class="course-meta"><span><small data-vi="Lịch" data-en="Schedule">Lịch</small><b data-vi="Thứ Tư · 09:45–12:30" data-en="Wednesday · 09:45–12:30">Thứ Tư · 09:45–12:30</b></span><span><small data-vi="Phòng" data-en="Room">Phòng</small><b>A2-612</b></span><span><small data-vi="Tín chỉ" data-en="Credits">Tín chỉ</small><b>03</b></span></div>
             </div>
 
             <div class="lesson-layout">
@@ -276,7 +275,7 @@
           <section class="page-view lesson-page" id="database" aria-labelledby="databaseTitle">
             <div class="course-hero database-hero">
               <div><p class="eyebrow">IST2610 · SESSION 01–02</p><h1 id="databaseTitle" data-vi="Quản lý CSDL trong kinh doanh" data-en="Database Management in Business">Quản lý CSDL trong kinh doanh</h1><p data-vi="Bản đồ kiến thức ERM & ERD · Thầy Trần Đức Minh" data-en="ERM & ERD knowledge map · Dr. Tran Duc Minh">Bản đồ kiến thức ERM & ERD · Thầy Trần Đức Minh</p></div>
-              <div class="course-meta"><span><small data-vi="Lịch" data-en="Schedule">Lịch</small><b data-vi="Thứ Tư · 03–04" data-en="Wednesday · 03–04">Thứ Tư · 03–04</b></span><span><small data-vi="Slide" data-en="Slides">Slide</small><b>51 pages</b></span><span><small data-vi="Bài tập" data-en="Exercise">Bài tập</small><b>Sweet Home</b></span></div>
+              <div class="course-meta"><span><small data-vi="Lịch" data-en="Schedule">Lịch</small><b data-vi="Thứ Tư · 06:45–09:45" data-en="Wednesday · 06:45–09:45">Thứ Tư · 06:45–09:45</b></span><span><small data-vi="Slide" data-en="Slides">Slide</small><b>51 pages</b></span><span><small data-vi="Bài tập" data-en="Exercise">Bài tập</small><b>Sweet Home</b></span></div>
             </div>
 
             <div class="database-summary">
@@ -321,14 +320,14 @@
           </section>
 
           <section class="page-view" id="schedule" aria-labelledby="scheduleTitle">
-            <div class="page-title"><p class="eyebrow">FALL 2026 · 03/08–29/11</p><h1 id="scheduleTitle" data-vi="Thời khóa biểu" data-en="Weekly timetable">Thời khóa biểu</h1><p data-vi="6 môn · 18 tín chỉ · Phòng A2-612" data-en="6 courses · 18 credits · Room A2-612">6 môn · 18 tín chỉ · Phòng A2-612</p></div>
+            <div class="page-title"><p class="eyebrow">FALL 2026 · 03/08–29/11</p><h1 id="scheduleTitle" data-vi="Thời khóa biểu mới nhất" data-en="Latest weekly timetable">Thời khóa biểu mới nhất</h1><p data-vi="6 môn · Thứ Hai đến Thứ Tư · Phòng 612 & Online" data-en="6 courses · Monday to Wednesday · Room 612 & Online">6 môn · Thứ Hai đến Thứ Tư · Phòng 612 & Online</p></div>
             <div class="schedule-board">
-              <div class="time-column"><span></span><b>01–02</b><b>03–04</b></div>
-              <section><header><span>MON</span><b data-vi="Thứ Hai" data-en="Monday">Thứ Hai</b></header><article class="slot blue"><small>01–02 · A2-612</small><strong data-vi="Phân tích dữ liệu lớn" data-en="Big Data Analytics">Phân tích dữ liệu lớn</strong><span>IST2510 · Thầy Huấn</span></article><article class="slot yellow"><small>03–04 · A2-612</small><strong data-vi="Khai thác dữ liệu" data-en="Data Mining">Khai thác dữ liệu</strong><span>IST4520 · Thầy Nghĩa</span></article></section>
-              <section><header><span>TUE</span><b data-vi="Thứ Ba" data-en="Tuesday">Thứ Ba</b></header><article class="slot lilac"><small>01–02 · A2-612</small><strong data-vi="Ra quyết định trong KD" data-en="Business Decision Making">Ra quyết định trong KD</strong><span>IST3500 · Lewis</span></article><article class="slot coral"><small>03–04 · A2-612</small><strong data-vi="Hoạch định & chính sách HTTT" data-en="IS Planning & Policy">Hoạch định & chính sách HTTT</strong><span>IST4120 · Shaoyi</span></article></section>
-              <section><header><span>WED</span><b data-vi="Thứ Tư" data-en="Wednesday">Thứ Tư</b></header><article class="slot green"><small>01–02 · A2-612</small><strong data-vi="Phân tích dữ liệu nâng cao" data-en="Advanced Data Analytics">Phân tích dữ liệu nâng cao</strong><span>IST4510 · Mitch</span></article><article class="slot navy"><small>03–04 · A2-612</small><strong data-vi="Quản lý CSDL trong KD" data-en="Database Management">Quản lý CSDL trong KD</strong><span>IST2610 · Đức Minh</span></article></section>
+              <div class="time-column"><span></span><b data-vi="Ca sáng 1" data-en="Morning 1">Ca sáng 1</b><b data-vi="Ca sáng 2" data-en="Morning 2">Ca sáng 2</b></div>
+              <section><header><span>MON</span><b data-vi="Thứ Hai" data-en="Monday">Thứ Hai</b></header><article class="slot blue"><small>06:45–09:30 · Phòng 612</small><strong data-vi="Phân tích dữ liệu lớn" data-en="Big Data Analytics">Phân tích dữ liệu lớn</strong><span>IST2510 · Mr Huấn</span></article><article class="slot green"><small>09:30–12:30 · Online</small><strong data-vi="Phân tích dữ liệu nâng cao" data-en="Advanced Data Analytics">Phân tích dữ liệu nâng cao</strong><span>IST4510 · Mitch</span></article></section>
+              <section><header><span>TUE</span><b data-vi="Thứ Ba" data-en="Tuesday">Thứ Ba</b></header><article class="slot lilac"><small>06:45–09:30 · Online</small><strong data-vi="Ra quyết định trong KD" data-en="Business Decision Making">Ra quyết định trong KD</strong><span>IST3500 · Lewis</span></article><article class="slot coral"><small>09:30–12:30 · Online</small><strong data-vi="Hoạch định & chính sách HTTT" data-en="IS Planning & Policy">Hoạch định & chính sách HTTT</strong><span>IST4120 · Shaoyi</span></article></section>
+              <section><header><span>WED</span><b data-vi="Thứ Tư" data-en="Wednesday">Thứ Tư</b></header><article class="slot navy"><small>06:45–09:45 · Phòng 612</small><strong data-vi="Quản lý CSDL trong KD" data-en="Database Management">Quản lý CSDL trong KD</strong><span>IST2610 · Mr Đức Minh</span></article><article class="slot yellow"><small>09:45–12:30 · Phòng 612</small><strong data-vi="Khai thác dữ liệu" data-en="Data Mining">Khai thác dữ liệu</strong><span>IST4520 · Mr Nghĩa</span></article></section>
             </div>
-            <div class="schedule-notes"><article><span>!</span><div><b data-vi="Mốc bắt đầu khác nhau" data-en="Different start dates">Mốc bắt đầu khác nhau</b><p data-vi="Khai thác dữ liệu bắt đầu 10/08; Hoạch định & chính sách HTTT bắt đầu 17/08. Các môn còn lại bắt đầu 03/08." data-en="Data Mining starts Aug 10; IS Planning & Policy starts Aug 17. Other courses start Aug 03.">Khai thác dữ liệu bắt đầu 10/08; Hoạch định & chính sách HTTT bắt đầu 17/08. Các môn còn lại bắt đầu 03/08.</p></div></article><article><span>⌁</span><div><b data-vi="Ngôn ngữ giảng dạy" data-en="Teaching language">Ngôn ngữ giảng dạy</b><p data-vi="Tất cả 6 học phần được ghi là Tiếng Anh trong thời khóa biểu gốc." data-en="All six modules are marked as English-taught in the source timetable.">Tất cả 6 học phần được ghi là Tiếng Anh trong thời khóa biểu gốc.</p></div></article></div>
+            <div class="schedule-notes"><article><span>!</span><div><b data-vi="Mốc bắt đầu khác nhau" data-en="Different start dates">Mốc bắt đầu khác nhau</b><p data-vi="Theo TKB mới nhất: Thứ Hai học Big Data và Phân tích nâng cao; Thứ Ba học Ra quyết định và Hoạch định HTTT; Thứ Tư học CSDL và Khai thác dữ liệu." data-en="Latest timetable: Monday has Big Data and Advanced Analytics; Tuesday has Decision Making and IS Planning; Wednesday has Database Management and Data Mining.">Theo TKB mới nhất: Thứ Hai học Big Data và Phân tích nâng cao; Thứ Ba học Ra quyết định và Hoạch định HTTT; Thứ Tư học CSDL và Khai thác dữ liệu.</p></div></article><article><span>⌁</span><div><b data-vi="Ngôn ngữ giảng dạy" data-en="Teaching language">Ngôn ngữ giảng dạy</b><p data-vi="Tất cả 6 học phần được ghi là Tiếng Anh trong thời khóa biểu gốc." data-en="All six modules are marked as English-taught in the source timetable.">Tất cả 6 học phần được ghi là Tiếng Anh trong thời khóa biểu gốc.</p></div></article></div>
           </section>
 
           <section class="page-view" id="vault" aria-labelledby="vaultTitle">
@@ -362,6 +361,7 @@
     <script src="course-data-update.js"></script>
     <script src="sql-ba-notes.js"></script>
     <script src="supabase-calendar.js"></script>
+    <script src="deadline-agenda.js"></script>
     <script src="local-device-notes.js"></script>
     <script type="module" src="ai-study-chat.js"></script>
   </body>

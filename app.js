@@ -1,10 +1,10 @@
 const courses = [
-  { code: "IST2510", vi: "Phân tích dữ liệu lớn", en: "Big Data Analytics", teacher: "Thầy Huấn", slot: "MON · 01–02", color: "#7fa4e8" },
-  { code: "IST2610", vi: "Quản lý CSDL trong kinh doanh", en: "Database Management in Business", teacher: "Đức Minh", slot: "WED · 03–04", color: "#6079a6", view: "database" },
-  { code: "IST3500", vi: "Ra quyết định trong kinh doanh", en: "Business Decision Making", teacher: "Lewis", slot: "TUE · 01–02", color: "#b3a2d6" },
-  { code: "IST4120", vi: "Hoạch định & chính sách HTTT", en: "IS Planning & Policy", teacher: "Shaoyi", slot: "TUE · 03–04", color: "#ee9e8d" },
-  { code: "IST4510", vi: "Phân tích dữ liệu nâng cao", en: "Advanced Data Analytics", teacher: "Mitch", slot: "WED · 01–02", color: "#8ac9ad" },
-  { code: "IST4520", vi: "Khai thác dữ liệu", en: "Data Mining", teacher: "Thầy Nghĩa", slot: "MON · 03–04", color: "#f5c84b", view: "mining" }
+  { code: "IST2510", vi: "Phân tích dữ liệu lớn", en: "Big Data Analytics", teacher: "Mr Huấn", slot: "MON · 06:45–09:30", place: "612", color: "#7fa4e8" },
+  { code: "IST2610", vi: "Quản lý CSDL trong kinh doanh", en: "Database Management in Business", teacher: "Mr Đức Minh", slot: "WED · 06:45–09:45", place: "612", color: "#6079a6", view: "database" },
+  { code: "IST3500", vi: "Ra quyết định trong kinh doanh", en: "Business Decision Making", teacher: "Lewis", slot: "TUE · 06:45–09:30", place: "ONLINE", color: "#b3a2d6" },
+  { code: "IST4120", vi: "Hoạch định & chính sách HTTT", en: "IS Planning & Policy", teacher: "Shaoyi", slot: "TUE · 09:30–12:30", place: "ONLINE", color: "#ee9e8d" },
+  { code: "IST4510", vi: "Phân tích dữ liệu nâng cao", en: "Advanced Data Analytics", teacher: "Mitch", slot: "MON · 09:30–12:30", place: "ONLINE", color: "#8ac9ad" },
+  { code: "IST4520", vi: "Khai thác dữ liệu", en: "Data Mining", teacher: "Mr Nghĩa", slot: "WED · 09:45–12:30", place: "612", color: "#f5c84b", view: "mining" }
 ];
 
 const state = {
@@ -24,7 +24,7 @@ function renderCourses() {
       <small>${course.code} · 3 CREDITS</small>
       <h3>${course[state.language]}</h3>
       <p>${course.en}</p>
-      <footer><b>${course.slot}</b><span>${course.teacher} · A2-612</span></footer>
+      <footer><b>${course.slot}</b><span>${course.teacher} · ${course.place}</span></footer>
     </article>
   `).join("");
   bindViewOpeners();
@@ -69,7 +69,8 @@ function updateProgress() {
   const unique = [...new Set(tasks.map(input => input.dataset.task))];
   const done = unique.filter(id => state.tasks[id]).length;
   const percent = unique.length ? Math.round((done / unique.length) * 100) : 0;
-  document.querySelector("#progressMetric").textContent = `${percent}%`;
+  const progressMetric = document.querySelector("#progressMetric");
+  if (progressMetric) progressMetric.textContent = `${percent}%`;
 }
 
 function setupTasks() {

@@ -5,8 +5,9 @@ const courseWorkspaces = [
     vi: "Phân tích dữ liệu lớn",
     en: "Big Data Analytics",
     teacher: "Thầy Huấn",
-    scheduleVi: "Thứ Hai · 01–02",
-    scheduleEn: "Monday · 01–02",
+    place: "612",
+    scheduleVi: "Thứ Hai · 06:45–09:30",
+    scheduleEn: "Monday · 06:45–09:30",
     start: "03/08/2026",
     sessionDate: "03/08/2026",
     statusVi: "Đã diễn ra",
@@ -19,8 +20,9 @@ const courseWorkspaces = [
     vi: "Ra quyết định trong kinh doanh",
     en: "Business Decision Making",
     teacher: "Lewis",
-    scheduleVi: "Thứ Ba · 01–02",
-    scheduleEn: "Tuesday · 01–02",
+    place: "Online",
+    scheduleVi: "Thứ Ba · 06:45–09:30",
+    scheduleEn: "Tuesday · 06:45–09:30",
     start: "03/08/2026",
     sessionDate: "04/08/2026",
     statusVi: "Đã diễn ra",
@@ -33,8 +35,9 @@ const courseWorkspaces = [
     vi: "Hoạch định & chính sách HTTT",
     en: "IS Planning & Policy",
     teacher: "Shaoyi",
-    scheduleVi: "Thứ Ba · 03–04",
-    scheduleEn: "Tuesday · 03–04",
+    place: "Online",
+    scheduleVi: "Thứ Ba · 09:30–12:30",
+    scheduleEn: "Tuesday · 09:30–12:30",
     start: "17/08/2026",
     sessionDate: "18/08/2026",
     statusVi: "Sắp tới",
@@ -47,10 +50,11 @@ const courseWorkspaces = [
     vi: "Phân tích dữ liệu nâng cao",
     en: "Advanced Data Analytics",
     teacher: "Mitch",
-    scheduleVi: "Thứ Tư · 01–02",
-    scheduleEn: "Wednesday · 01–02",
+    place: "Online",
+    scheduleVi: "Thứ Hai · 09:30–12:30",
+    scheduleEn: "Monday · 09:30–12:30",
     start: "03/08/2026",
-    sessionDate: "05/08/2026",
+    sessionDate: "03/08/2026",
     statusVi: "Đã diễn ra",
     statusEn: "Completed",
     colors: ["#def3e9", "#effaf5"]
@@ -109,7 +113,7 @@ function workspaceTemplate(course) {
         </div>
         <div class="course-meta">
           <span><small data-vi="Lịch" data-en="Schedule">Lịch</small><b data-vi="${course.scheduleVi}" data-en="${course.scheduleEn}">${course.scheduleVi}</b></span>
-          <span><small data-vi="Phòng" data-en="Room">Phòng</small><b>A2-612</b></span>
+          <span><small data-vi="Phòng / Hình thức" data-en="Room / Mode">Phòng / Hình thức</small><b>${course.place}</b></span>
           <span><small data-vi="Tín chỉ" data-en="Credits">Tín chỉ</small><b>03</b></span>
         </div>
       </div>
