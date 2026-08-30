@@ -65,17 +65,36 @@ function isSameCalendarDay(left, right) {
   return calendarDateKey(left) === calendarDateKey(right);
 }
 
-async function supabaseCalendarGet(table, params) {
+async function supabaseCalendarGetAll(table, params, pageSize = 1000) {
   const endpoint = new URL(`${CALENDAR_SUPABASE_URL}/rest/v1/${table}`);
   Object.entries(params).forEach(([name, value]) => endpoint.searchParams.set(name, value));
-  const response = await fetch(endpoint, {
-    headers: { apikey: CALENDAR_SUPABASE_KEY, Accept: "application/json" },
-    cache: "no-store"
-  });
+  const allRows = [];
+  let start = 0;
 
-  if (!response.ok) throw new Error(`${table}: HTTP ${response.status}`);
-  const rows = await response.json();
-  return Array.isArray(rows) ? rows : [];
+  while (true) {
+    const response = await fetch(endpoint, {
+      headers: {
+        apikey: CALENDAR_SUPABASE_KEY,
+        Accept: "application/json",
+        Range: `${start}-${start + pageSize - 1}`,
+        Prefer: "count=exact"
+      },
+      cache: "no-store"
+    });
+
+    if (!response.ok) throw new Error(`${table}: HTTP ${response.status}`);
+    const rows = await response.json();
+    if (!Array.isArray(rows)) throw new Error(`${table}: invalid response`);
+    allRows.push(...rows);
+
+    const contentRange = response.headers.get("content-range") || "";
+    const totalMatch = contentRange.match(/\/(\d+)$/);
+    const total = totalMatch ? Number(totalMatch[1]) : null;
+    if (rows.length < pageSize || (Number.isFinite(total) && allRows.length >= total)) break;
+    start += pageSize;
+  }
+
+  return allRows;
 }
 
 function normalizeDeadline(row) {
@@ -106,13 +125,12 @@ async function loadSupabaseCalendar() {
 
   try {
     const [deadlineRows, groupRows, memberRows] = await Promise.all([
-      supabaseCalendarGet("deadlines", {
+      supabaseCalendarGetAll("deadlines", {
         select: "id,group_id,title,due_date,link,type,assignee,created_by,created_at,color",
-        order: "due_date.asc",
-        limit: "500"
+        order: "due_date.asc,id.asc"
       }),
-      supabaseCalendarGet("groups", { select: "id,name,created_by,created_at", order: "created_at.asc", limit: "200" }),
-      supabaseCalendarGet("group_members", { select: "id,group_id,member_name,role,created_at", order: "created_at.asc", limit: "500" })
+      supabaseCalendarGetAll("groups", { select: "id,name,created_by,created_at", order: "created_at.asc,id.asc" }),
+      supabaseCalendarGetAll("group_members", { select: "id,group_id,member_name,role,created_at", order: "created_at.asc,id.asc" })
     ]);
 
     supabaseCalendarState.deadlines = deadlineRows.map(normalizeDeadline).filter(Boolean);
@@ -216,14 +234,12 @@ function renderCalendarGrid() {
     const date = new Date(gridStart.getFullYear(), gridStart.getMonth(), gridStart.getDate() + index);
     const inMonth = date.getMonth() === month;
     const events = inMonth ? [...classesOnDate(date), ...deadlinesOnDate(date)] : [];
-    const visibleEvents = events.slice(0, 4);
-    const more = events.length - visibleEvents.length;
     const classNames = ["calendar-day", inMonth ? "" : "is-other-month", isSameCalendarDay(date, today) ? "is-today" : ""].filter(Boolean).join(" ");
 
     cells.push(`
       <article class="${classNames}" role="gridcell" aria-label="${escapeCalendarHtml(date.toLocaleDateString(calendarLanguage() === "en" ? "en-GB" : "vi-VN"))}">
         <time class="calendar-day-number" datetime="${calendarDateKey(date)}">${date.getDate()}</time>
-        <div class="calendar-day-events">${visibleEvents.map(calendarEventMarkup).join("")}${more > 0 ? `<span class="calendar-more">+${more} ${calendarText("mốc", "more")}</span>` : ""}</div>
+        <div class="calendar-day-events">${events.map(calendarEventMarkup).join("")}</div>
       </article>`);
   }
 

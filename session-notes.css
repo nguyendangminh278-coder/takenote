@@ -1,0 +1,245 @@
+.session-note-panel {
+  margin-top: 22px;
+  border: 1px solid #dce8e3;
+  border-top: 5px solid #93d5bd;
+  background: #fff;
+}
+
+.session-note-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.session-note-heading > div:nth-child(2) { min-width: 0; }
+
+.session-note-heading h2 {
+  margin: 3px 0 7px;
+  font-size: clamp(21px, 2.5vw, 29px);
+}
+
+.session-note-heading p:last-child {
+  max-width: 760px;
+  margin: 0;
+  color: #667085;
+  line-height: 1.6;
+}
+
+.session-note-icon {
+  display: grid;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 13px;
+  background: #eaf8f2;
+  color: #3d8d70;
+}
+
+.session-note-icon svg {
+  width: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.session-local-badge {
+  margin-left: auto;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #fff2e9;
+  color: #ad6340;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.session-note-form {
+  margin-top: 20px;
+  padding: 17px;
+  border: 1px solid #e2e8ed;
+  border-radius: 15px;
+  background: #fbfdfc;
+}
+
+.session-note-fields {
+  display: grid;
+  grid-template-columns: minmax(175px, .42fr) minmax(0, 1fr);
+  gap: 13px;
+}
+
+.session-note-fields label,
+.session-note-content-label {
+  display: grid;
+  gap: 7px;
+  color: #526174;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.session-note-fields input,
+.session-note-content {
+  width: 100%;
+  border: 1px solid #d8e2e8;
+  border-radius: 11px;
+  outline: none;
+  background: #fff;
+  color: #263245;
+  font: 14px/1.6 Arial, sans-serif;
+}
+
+.session-note-fields input { min-height: 44px; padding: 9px 12px; }
+.session-note-content-label { margin-top: 13px; }
+
+.session-note-content {
+  min-height: 190px;
+  padding: 14px 15px;
+  resize: vertical;
+}
+
+.session-note-fields input:focus,
+.session-note-content:focus {
+  border-color: #7fc3aa;
+  box-shadow: 0 0 0 4px rgba(147, 213, 189, .22);
+}
+
+.session-note-actions,
+.session-note-actions > div,
+.session-note-archive-heading,
+.session-note-archive-heading > div,
+.session-note-item-actions {
+  display: flex;
+  align-items: center;
+}
+
+.session-note-actions {
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 13px;
+}
+
+.session-note-actions > div { gap: 8px; }
+
+.session-note-status {
+  margin: 0;
+  color: #6c7787;
+  font-size: 12px;
+}
+
+.session-note-primary,
+.session-note-secondary,
+.session-note-export,
+.session-note-item-actions button {
+  border: 1px solid #d8e2e8;
+  border-radius: 9px;
+  background: #fff;
+  color: #526174;
+  font: 750 12px Arial, sans-serif;
+  cursor: pointer;
+}
+
+.session-note-primary,
+.session-note-secondary { min-height: 38px; padding: 8px 12px; }
+
+.session-note-primary {
+  border-color: #74b99f;
+  background: #74b99f;
+  color: #fff;
+}
+
+.session-note-primary:hover { background: #5fa98e; }
+.session-note-secondary:hover,
+.session-note-export:hover { border-color: #b8a7d9; background: #f8f5fc; }
+
+.session-note-archive {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed #dfe6e9;
+}
+
+.session-note-archive-heading {
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.session-note-archive-heading > div { gap: 8px; }
+.session-note-archive-heading h3 { margin: 0; font-size: 17px; }
+
+.session-note-count {
+  min-width: 24px;
+  height: 24px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: #eef4f1;
+  color: #4a7d69;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.session-note-export { padding: 8px 11px; }
+.session-note-export:disabled { opacity: .45; cursor: not-allowed; }
+
+.session-note-list {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.session-note-empty {
+  margin: 0;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f8fafb;
+  color: #8a94a2;
+  text-align: center;
+  font-size: 12px;
+}
+
+.session-note-item {
+  display: grid;
+  grid-template-columns: minmax(185px, .42fr) minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 15px;
+  padding: 14px;
+  border: 1px solid #e2e8ed;
+  border-left: 4px solid #c8b9e6;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.session-note-item-meta { min-width: 0; }
+.session-note-item time { color: #658274; font-size: 10px; font-weight: 800; text-transform: capitalize; }
+.session-note-item h4 { margin: 5px 0 0; color: #263245; font-size: 14px; overflow-wrap: anywhere; }
+
+.session-note-item-content {
+  margin: 0;
+  color: #596679;
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.session-note-item-actions { gap: 6px; }
+.session-note-item-actions button { padding: 7px 9px; }
+.session-note-item-actions button[data-action="delete"] { color: #b45858; }
+
+@media (max-width: 760px) {
+  .session-note-fields { grid-template-columns: 1fr; }
+  .session-note-item { grid-template-columns: 1fr; }
+  .session-note-item-actions { justify-content: flex-end; }
+}
+
+@media (max-width: 640px) {
+  .session-note-heading { flex-wrap: wrap; gap: 11px; }
+  .session-note-icon { flex-basis: 40px; width: 40px; height: 40px; }
+  .session-local-badge { margin-left: 51px; margin-top: -6px; }
+  .session-note-form { padding: 13px; }
+  .session-note-actions { align-items: stretch; flex-direction: column; }
+  .session-note-actions > div { display: grid; grid-template-columns: 1fr 1fr; }
+  .session-note-archive-heading { align-items: flex-start; }
+}
