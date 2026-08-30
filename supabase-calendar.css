@@ -391,6 +391,7 @@
   margin-top: 5px;
   display: grid;
   gap: 4px;
+  align-content: start;
 }
 
 .calendar-event {
@@ -415,13 +416,6 @@
 .calendar-event.class-event { background: #e6f5ee; color: #246f52; border-left: 3px solid #52a980; }
 .calendar-event.private-event { background: #f2e9fb; color: #7132a7; border-left: 3px solid #9b51e0; }
 .calendar-event[href]:hover { filter: brightness(.94); }
-
-.calendar-more {
-  color: #657186;
-  font-size: 8px;
-  font-weight: 800;
-  padding-left: 4px;
-}
 
 .calendar-footer {
   justify-content: space-between;
